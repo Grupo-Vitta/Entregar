@@ -5,8 +5,7 @@
     'description': 'Módulo personalizado para integrar los métodos de envío de Entregar en Odoo 17.',
     'author': 'Sebastián Díaz',
     'depends': ['base', 'delivery'],
-    'data': [
-    ],
+    'data': [],
     'installable': True,
     'application': False,
 }
