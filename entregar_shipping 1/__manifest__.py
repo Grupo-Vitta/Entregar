@@ -7,6 +7,6 @@
     'depends': ['base', 'delivery'],
     'data': [],
     'installable': True,
-    'application': False,
+    'application': False
 }
 
