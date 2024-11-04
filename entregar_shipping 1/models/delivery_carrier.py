@@ -41,10 +41,10 @@ class EntregarShippingCarrier(models.Model):
                 self.env['entregar.shipping.history'].create({
                     'shipping_id': self.id,
                     'date': entry['date']['date'],
-                    'status': entry.get('state', '-'),
-                    'location': entry.get('location', ''),
+                    'status': entry.get('state', '-').replace(" ", "_"),
+                    'location': entry.get('location', '').replace(" ", "_"),
                     'price': entry.get('price', 0.0),
-                })
+            })
         else:
             raise UserError("Error al obtener el historial del envío")
 
@@ -59,3 +59,4 @@ class EntregarShippingHistory(models.Model):
     status = fields.Char(string="Estado")
     location = fields.Char(string="Ubicación")
     price = fields.Float(string="Precio")
+
